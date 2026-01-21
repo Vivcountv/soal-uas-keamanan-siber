@@ -1,0 +1,1577 @@
+[
+  {
+    "id": 1,
+    "question": "Yang menyebabkan usable security menjadi sulit diterapkan adalah …",
+    "options": {
+      "A": "Tidak adanya faktor stres dalam penggunaan sistem",
+      "B": "Semua pengguna adalah pakar keamanan",
+      "C": "Pengguna selalu patuh pada aturan tanpa kecuali",
+      "D": "Pengguna sering bertindak ceroboh atau tidak termotivasi"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 2,
+    "question": "Tantangan utama dari manusia yang tidak termotivasi dalam menjaga keamanan adalah …",
+    "options": {
+      "A": "Tidak mampu melakukan operasi kriptografi",
+      "B": "Tidak memiliki akses ke alat keamanan",
+      "C": "Dengan sengaja merusak sistem",
+      "D": "Menganggap keamanan tidak penting atau merepotkan"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 3,
+    "question": "Prinsip Crime Science dan Economics menyatakan bahwa …",
+    "options": {
+      "A": "Keamanan harus murah untuk diterapkan",
+      "B": "Keamanan harus fokus mencegah orang dalam",
+      "C": "Keamanan hanya berbasis kendala teknis",
+      "D": "Upaya penyerang harus lebih besar daripada keuntungan yang diperoleh"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 4,
+    "question": "Contoh effectiveness dalam usability adalah …",
+    "options": {
+      "A": "Pengguna butuh pelatihan lama",
+      "B": "Pengguna menyelesaikan tugas secara akurat dan lengkap",
+      "C": "Pengguna merasa puas tapi hasil salah",
+      "D": "Biaya operasional rendah"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 5,
+    "question": "Yang termasuk contoh keterbatasan manusia (human limitation) adalah …",
+    "options": {
+      "A": "Keterbatasan memori jangka pendek saat memasukkan OTP",
+      "B": "Bandwidth jaringan terbatas",
+      "C": "Kemampuan komputasi server yang rendah",
+      "D": "Resolusi layar yang kecil"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 6,
+    "question": "Pertanyaan penting dalam konsep “human in the loop” adalah …",
+    "options": {
+      "A": "Apakah semua proses sudah terenkripsi?",
+      "B": "Apakah mereka termotivasi dan memahami apa yang harus dilakukan?",
+      "C": "Apakah sistem selalu otomatis?",
+      "D": "Apakah server memiliki backup?"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 7,
+    "question": "Tujuan utama stakeholder engagement dalam keamanan siber adalah …",
+    "options": {
+      "A": "Memahami emosi, tekanan, dan kebiasaan pengguna",
+      "B": "Menggantikan seluruh sistem dengan otomatisasi penuh",
+      "C": "Menghilangkan peran manusia dalam keamanan",
+      "D": "Menambah beban kerja karyawan"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 8,
+    "question": "Yang termasuk penyebab latent failure menurut model Swiss Cheese adalah …",
+    "options": {
+      "A": "Serangan malware eksternal tiba-tiba",
+      "B": "Exploit zero-day",
+      "C": "Kebijakan organisasi yang lemah dan kondisi lingkungan kerja",
+      "D": "Kerusakan hardware akibat bencana"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 9,
+    "question": "Apa yang membuat perancangan protokol kriptografi menantang dari sisi perilaku manusia?",
+    "options": {
+      "A": "Preferensi melakukan kriptografi manual",
+      "B": "Penolakan teknologi kriptografi modern",
+      "C": "Tingginya tingkat kesalahan dalam menyimpan kunci kriptografi dengan aman",
+      "D": "Penolakan otomatisasi"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 10,
+    "question": "Tahap pertama dalam siklus respons insiden adalah …",
+    "options": {
+      "A": "Pemulihan",
+      "B": "Pemberantasan",
+      "C": "Penahanan",
+      "D": "Identifikasi"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 11,
+    "question": "Contoh tren malware modern adalah …",
+    "options": {
+      "A": "Fileless malware",
+      "B": "Driver printer",
+      "C": "Aplikasi perkantoran standar",
+      "D": "Software editing video"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 12,
+    "question": "IoT menjadi tantangan forensik karena …",
+    "options": {
+      "A": "Tidak simpan data sama sekali",
+      "B": "Sumber daya perangkat terbatas",
+      "C": "Selalu memakai Windows",
+      "D": "Tidak terhubung internet"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 13,
+    "question": "Yang termasuk tujuan forensik digital adalah …",
+    "options": {
+      "A": "Menghapus log otomatis",
+      "B": "Mengumpulkan bukti sah dan merekonstruksi kronologi",
+      "C": "Mempercepat jaringan",
+      "D": "Mengganti sistem operasi"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 14,
+    "question": "Chain of custody diperlukan untuk …",
+    "options": {
+      "A": "Mempercepat booting",
+      "B": "Menggabungkan bukti digital",
+      "C": "Menjamin bukti tetap otentik",
+      "D": "Menghapus metadata"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 15,
+    "question": "Forensik jaringan bertujuan untuk …",
+    "options": {
+      "A": "Menganalisis lalu lintas jaringan",
+      "B": "Memblokir semua koneksi internet",
+      "C": "Mendesain topologi baru",
+      "D": "Mempercepat bandwidth"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 16,
+    "question": "Wireshark digunakan untuk …",
+    "options": {
+      "A": "Backup cloud",
+      "B": "Enkripsi database",
+      "C": "Analisis paket jaringan",
+      "D": "Desain UI aplikasi"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 17,
+    "question": "Tujuan utama respons insiden adalah …",
+    "options": {
+      "A": "Menangani insiden secara cepat dan terstruktur",
+      "B": "Menghapus seluruh data",
+      "C": "Mengganti perangkat keras",
+      "D": "Mempercepat koneksi internet"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 18,
+    "question": "Apa yang dimaksud dengan \"Secondary Use\" dalam Solove's Taxonomy?",
+    "options": {
+      "A": "Penggunaan data untuk tujuan lain tanpa persetujuan",
+      "B": "Penggunaan data sesuai tujuan awal",
+      "C": "Penggunaan data untuk penelitian yang disetujui",
+      "D": "Penggunaan data untuk keamanan nasional"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 19,
+    "question": "Dalam teori Contextual Integrity, norma informasi ditentukan oleh?",
+    "options": {
+      "A": "Jumlah pengguna sistem",
+      "B": "Kecepatan transmisi data",
+      "C": "Jenis informasi dan prinsip transmisi",
+      "D": "Lokasi server data"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 20,
+    "question": "Apa perbedaan utama antara kerahasiaan dan privasi?",
+    "options": {
+      "A": "Kerahasiaan adalah hak hukum, privasi adalah preferensi personal",
+      "B": "Privasi menyembunyikan semua data, kerahasiaan memilih apa yang disembunyikan",
+      "C": "Tidak ada perbedaan, keduanya sama",
+      "D": "Kerahasiaan melindungi data; privasi memberi kendali atas data"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 21,
+    "question": "Yang termasuk hak subjek data pribadi menurut UU PDP adalah?",
+    "options": {
+      "A": "Hak Akses dan Penghapusan",
+      "B": "Hak Kepemilikan Database",
+      "C": "Hak Pengawasan Sistem",
+      "D": "Hak Menjual Data"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 22,
+    "question": "Jumlah Legal Basis dalam UU PDP adalah?",
+    "options": {
+      "A": "Tiga",
+      "B": "Enam",
+      "C": "Empat",
+      "D": "Lima"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 23,
+    "question": "Apa yang dimaksud dengan Privacy by Design?",
+    "options": {
+      "A": "Mempertimbangkan privasi sejak awal desain",
+      "B": "Menggunakan enkripsi terbaru saja",
+      "C": "Menambahkan privasi setelah sistem selesai",
+      "D": "Melaporkan semua pelanggaran"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 24,
+    "question": "Privacy sebagai hak untuk \"ditinggalkan sendiri\" pertama kali dikemukakan oleh?",
+    "options": {
+      "A": "Alan Westin",
+      "B": "Warren & Brandeis",
+      "C": "Helen Nissenbaum",
+      "D": "Irwin Altman"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 25,
+    "question": "HMAC lebih aman dibanding MAC karena …",
+    "options": {
+      "A": "Tahan terhadap length extension attack",
+      "B": "Tidak menggunakan key",
+      "C": "Menggunakan RSA",
+      "D": "Lebih cepat dari MD5"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 26,
+    "question": "Public-key cryptography memungkinkan …",
+    "options": {
+      "A": "Dekripsi dengan public key secara langsung",
+      "B": "Verifikasi digital signature menggunakan public key",
+      "C": "Operasi hashing otomatis",
+      "D": "Kompresi data"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 27,
+    "question": "Komponen yang termasuk bagian dari MAC adalah …",
+    "options": {
+      "A": "Public Key",
+      "B": "Secret Key",
+      "C": "Certificate Authority",
+      "D": "Nonce Generator"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 28,
+    "question": "Mengapa Public-Key Cryptography cocok untuk komunikasi skala besar?",
+    "options": {
+      "A": "Tidak memerlukan CA",
+      "B": "Tidak perlu bertukar secret key dengan setiap pihak",
+      "C": "Lebih cepat dari symmetric encryption",
+      "D": "Kunci privat dapat dibagikan bebas"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 29,
+    "question": "Pada RSA, proses enkripsi menggunakan rumus …",
+    "options": {
+      "A": "m^(d−1) mod n",
+      "B": "m × e mod n",
+      "C": "c^d mod n",
+      "D": "m^e mod n"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 30,
+    "question": "Fungsi Tag pada MAC adalah …",
+    "options": {
+      "A": "Melakukan enkripsi pesan",
+      "B": "Menghasilkan nonce acak",
+      "C": "Menandatangani pesan digital",
+      "D": "Menghasilkan nilai autentikasi berdasarkan pesan dan secret key"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 31,
+    "question": "Dalam RSA, kunci privat terdiri dari …",
+    "options": {
+      "A": "(n, d)",
+      "B": "(p, q)",
+      "C": "(e, q)",
+      "D": "(n, e)"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 32,
+    "question": "CA menandatangani sertifikat digital menggunakan …",
+    "options": {
+      "A": "Private key CA",
+      "B": "Secret key user",
+      "C": "Public key user",
+      "D": "HMAC"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 33,
+    "question": "AE (Authenticated Encryption) lebih baik dari enkripsi biasa karena …",
+    "options": {
+      "A": "Tidak membutuhkan kunci",
+      "B": "Tidak memerlukan nonce",
+      "C": "Menjamin kerahasiaan sekaligus integritas",
+      "D": "Menghasilkan ciphertext lebih pendek"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 34,
+    "question": "Apa tantangan utama distribusi kunci simetris?",
+    "options": {
+      "A": "Kunci tidak dapat diperbarui",
+      "B": "Jumlah kunci tumbuh secara kuadratik terhadap jumlah pengguna",
+      "C": "Tidak kompatibel dengan jaringan",
+      "D": "Ciphertext menjadi tidak stabil"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 35,
+    "question": "Apa kelebihan AES dibanding DES?",
+    "options": {
+      "A": "Ukuran kunci lebih panjang dan tahan brute force",
+      "B": "Berdasarkan Feistel penuh",
+      "C": "Jumlah ronde lebih sedikit",
+      "D": "Menggunakan kunci ganda"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 36,
+    "question": "Serangan di mana penyerang memilih plaintext dan melihat ciphertext disebut?",
+    "options": {
+      "A": "Chosen-plaintext attack",
+      "B": "Known-key attack",
+      "C": "Ciphertext-only attack",
+      "D": "Chosen-hash attack"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 37,
+    "question": "Kelemahan utama RC4 terdapat pada bagian apa?",
+    "options": {
+      "A": "Bias statistik pada byte awal keystream",
+      "B": "Tidak mendukung kunci panjang",
+      "C": "Ukuran bloknya kecil",
+      "D": "Sering melakukan collision"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 38,
+    "question": "Apa keunggulan utama mode CTR?",
+    "options": {
+      "A": "Tidak membutuhkan counter",
+      "B": "Menggunakan S-box tambahan",
+      "C": "Dapat diproses secara paralel",
+      "D": "Memungkinkan random access"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 39,
+    "question": "Cipher yang mengenkripsi data dalam blok ukuran tetap disebut apa?",
+    "options": {
+      "A": "Hash cipher",
+      "B": "Block cipher",
+      "C": "Public cipher",
+      "D": "Stream cipher"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 40,
+    "question": "Manakah ciri stream cipher?",
+    "options": {
+      "A": "Memiliki ukuran blok tetap",
+      "B": "Menghasilkan keystream dan menggunakan XOR",
+      "C": "Menggunakan S-box",
+      "D": "Menggunakan Feistel Network"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 41,
+    "question": "Mode CFB mengubah block cipher menjadi apa?",
+    "options": {
+      "A": "Stream cipher",
+      "B": "Counter-mode cipher",
+      "C": "Feistel network",
+      "D": "Hash generator"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 42,
+    "question": "Apa risiko utama yang terkait dengan penggunaan cookies?",
+    "options": {
+      "A": "Beban server yang lebih tinggi",
+      "B": "Menyimpan data pribadi pengguna yang dapat dibajak (XSS)",
+      "C": "Waktu pemuatan halaman yang lebih cepat",
+      "D": "Menghentikan komunikasi yang aman"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 43,
+    "question": "Langkah yang tepat untuk meningkatkan keamanan client-side storage adalah…",
+    "options": {
+      "A": "Menandatangani data secara kriptografis & Enkripsi data sensitif",
+      "B": "Menyimpan semua data pengguna dalam format teks biasa",
+      "C": "Mengizinkan akses publik ke data yang disimpan",
+      "D": "Menggunakan LocalStorage untuk password"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 44,
+    "question": "Apa yang dimaksud dengan Local File Inclusion (LFI)?",
+    "options": {
+      "A": "Aplikasi mengizinkan file dari sumber eksternal",
+      "B": "Aplikasi memungkinkan penyerang memuat file sistem lokal secara tidak sah",
+      "C": "Teknik mengunduh file via FTP",
+      "D": "Metode pembatasan akses file via HTTP"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 45,
+    "question": "Apa fungsi utama Web PKI dalam keamanan web?",
+    "options": {
+      "A": "Mengelola cookie secara aman",
+      "B": "Menyediakan autentikasi server dan enkripsi lalu lintas web",
+      "C": "Mengenkripsi data sisi klien saja",
+      "D": "Menggunakan enkripsi simetris agar lebih cepat"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 46,
+    "question": "Apa tujuan utama sandboxing dalam keamanan aplikasi?",
+    "options": {
+      "A": "Menyediakan antarmuka pengguna yang lebih halus",
+      "B": "Mengisolasi aplikasi dan membatasi akses ke sumber daya sistem",
+      "C": "Agar aplikasi bisa mengakses semua data ponsel",
+      "D": "Meningkatkan kinerja aplikasi mobile"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 47,
+    "question": "Contoh penerapan prinsip least privilege dalam web security adalah…",
+    "options": {
+      "A": "Memberikan hak root untuk semua aplikasi",
+      "B": "Menonaktifkan firewall",
+      "C": "Menjalankan web server dengan hak istimewa minimum & batasi port",
+      "D": "Membuka semua port untuk debugging"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 48,
+    "question": "Manakah yang lebih berfokus pada webification suatu layanan?",
+    "options": {
+      "A": "Membuat aplikasi mobile responsif",
+      "B": "Membuat aplikasi dapat diakses melalui browser",
+      "C": "Mengembangkan aplikasi desktop",
+      "D": "Enkripsi data HTTP"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 49,
+    "question": "Apa itu serangan clickjacking?",
+    "options": {
+      "A": "Membuat pengguna mengklik sesuatu yang berbeda dari yang mereka lihat",
+      "B": "Manipulasi data dengan SQL Injection",
+      "C": "Mengambil alih perangkat mobile",
+      "D": "Mengakses server tanpa izin"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 50,
+    "question": "Apa yang dimaksud dengan Cross-Site Scripting (XSS)?",
+    "options": {
+      "A": "Protokol untuk mengenkripsi file di server",
+      "B": "Teknik mencegat data di jaringan",
+      "C": "Serangan yang memungkinkan penyerang menyisipkan skrip berbahaya ke halaman web",
+      "D": "Proses autentikasi biometrik"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 51,
+    "question": "Tujuan utama dari mobile device authentication adalah?",
+    "options": {
+      "A": "Memastikan OS terbaru",
+      "B": "Memastikan hanya pengguna sah yang dapat mengakses perangkat/aplikasi",
+      "C": "Memverifikasi identitas aplikasi",
+      "D": "Melindungi dari pencurian fisik"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 52,
+    "question": "Apa yang dimaksud dengan appification?",
+    "options": {
+      "A": "Mengubah aplikasi mobile menjadi web",
+      "B": "Mengubah aplikasi web menjadi native",
+      "C": "Mengembangkan aplikasi khusus untuk platform mobile",
+      "D": "Membuat aplikasi web offline"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 53,
+    "question": "Apa yang dimaksud dengan Cross-Site Request Forgery (CSRF)?",
+    "options": {
+      "A": "Metode pencegahan XSS",
+      "B": "Serangan yang memaksa pengguna sah melakukan tindakan berbahaya",
+      "C": "Pengalihan ke situs tidak aman",
+      "D": "Menyembunyikan data di server"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 54,
+    "question": "Manakah metode autentikasi HTTP?",
+    "options": {
+      "A": "SSL",
+      "B": "OAuth 2.0",
+      "C": "XSS",
+      "D": "HTTP Basic Authentication"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 55,
+    "question": "Risiko utama upload file oleh pengguna adalah…",
+    "options": {
+      "A": "File berbahaya dapat dieksekusi di server",
+      "B": "File besar memenuhi storage",
+      "C": "Manajemen sesi terputus",
+      "D": "Trafik meningkat drastis"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 56,
+    "question": "Manakah yang benar tentang app stores?",
+    "options": {
+      "A": "Hanya menyediakan aplikasi native",
+      "B": "Tidak ada mekanisme keamanan",
+      "C": "Instalasi & manajemen aplikasi terpusat",
+      "D": "Semua aplikasi dijamin 100% aman"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 57,
+    "question": "Apa fungsi firewall dalam keamanan jaringan?",
+    "options": {
+      "A": "Memantau dan memfilter lalu lintas jaringan",
+      "B": "Menyimpan data backup",
+      "C": "Sebagai antivirus",
+      "D": "Menyediakan VPN"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 58,
+    "question": "Apa itu shoulder surfing?",
+    "options": {
+      "A": "SQL injection visual",
+      "B": "Rekayasa sosial lewat telepon",
+      "C": "Enkripsi yang buruk",
+      "D": "Mencuri password dengan mengamati korban secara fisik"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 59,
+    "question": "Apa itu command injection?",
+    "options": {
+      "A": "Menyisipkan perintah OS berbahaya ke aplikasi",
+      "B": "Bypass autentikasi database",
+      "C": "Serangan DoS",
+      "D": "SQL injection"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 60,
+    "question": "Content Security Policy (CSP) mencegah serangan…",
+    "options": {
+      "A": "Brute force",
+      "B": "DoS",
+      "C": "Injection dari sumber tidak tepercaya & XSS",
+      "D": "Phishing email"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 61,
+    "question": "Pertahanan paling efektif terhadap phishing adalah…",
+    "options": {
+      "A": "Ad blocker",
+      "B": "Update software",
+      "C": "Menghapus Cookie",
+      "D": "Multi-Factor Authentication (MFA)"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 62,
+    "question": "Tujuan OAuth dalam keamanan web adalah…",
+    "options": {
+      "A": "SQL injection prevention",
+      "B": "Enkripsi database",
+      "C": "Akses/autentikasi tanpa membagikan password",
+      "D": "HTTPS enforcement"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 63,
+    "question": "Mengapa update software penting untuk keamanan?",
+    "options": {
+      "A": "Menambah fitur baru",
+      "B": "Mempercantik UI",
+      "C": "Memperbaiki kerentanan (vulnerabilities)",
+      "D": "Menghapus fitur lama"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 64,
+    "question": "Apa itu SQL Injection?",
+    "options": {
+      "A": "Enkripsi database",
+      "B": "Manipulasi HTTP Header",
+      "C": "Menjalankan SQL berbahaya pada database aplikasi",
+      "D": "Token authentication"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 65,
+    "question": "Teknik yang sering digunakan dalam phishing adalah…",
+    "options": {
+      "A": "Cookie stealing",
+      "B": "XSS",
+      "C": "Email palsu dengan tautan berbahaya",
+      "D": "HTTPS downgrading"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 66,
+    "question": "Manakah yang merupakan Privacy-Enhancing Technology (PET)?",
+    "options": {
+      "A": "Profiling dan targeting",
+      "B": "Encryption dan anonymization (seperti Homomorphic Encryption)",
+      "C": "Data harvesting",
+      "D": "Surveillance dan tracking"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 67,
+    "question": "Kapan UU PDP No. 27 Tahun 2022 disahkan?",
+    "options": {
+      "A": "17 Oktober 2022",
+      "B": "17 Februari 2022",
+      "C": "27 Oktober 2022",
+      "D": "27 Februari 2022"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 68,
+    "question": "Siapa yang wajib mematuhi UU PDP?",
+    "options": {
+      "A": "Korporasi, administrator negara, dan organisasi internasional",
+      "B": "Hanya perusahaan besar",
+      "C": "Hanya individu",
+      "D": "Hanya lembaga pemerintah"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 69,
+    "question": "Yang BUKAN keadaan privasi menurut Westin adalah…",
+    "options": {
+      "A": "Solitude",
+      "B": "Intimacy",
+      "C": "Authority",
+      "D": "Anonymity"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 70,
+    "question": "Siapa penggagas teori Privacy Regulation (1975)?",
+    "options": {
+      "A": "Warren & Brandeis",
+      "B": "Alan Westin",
+      "C": "Irwin Altman",
+      "D": "Helen Nissenbaum"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 71,
+    "question": "DES paling umum menggunakan berapa kunci?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "1"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 72,
+    "question": "Berapa panjang kunci efektif DES?",
+    "options": {
+      "A": "128 bit",
+      "B": "64 bit",
+      "C": "192 bit",
+      "D": "56 bit"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 73,
+    "question": "Tahapan apa saja dalam satu ronde DES?",
+    "options": {
+      "A": "Substitusi melalui S-box, ShiftRows, Ekspansi",
+      "B": "MixColumns dan AddRoundKey",
+      "C": "Hashing dan Salting",
+      "D": "Kompresi dan Enkripsi"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 74,
+    "question": "Mengapa DES sudah tidak dianggap aman?",
+    "options": {
+      "A": "Jumlah rondenya terlalu sedikit",
+      "B": "Tidak menggunakan S-box",
+      "C": "Algoritmanya tidak deterministik",
+      "D": "Ukuran kuncinya terlalu pendek (rentan brute force)"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 75,
+    "question": "HMAC menggunakan dua lapisan hashing yaitu ...",
+    "options": {
+      "A": "Linear hash dan adaptive hash",
+      "B": "Inner hash dan outer hash",
+      "C": "Private hash dan public hash",
+      "D": "Base hash dan extended hash"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 76,
+    "question": "Contoh mode AE (Authenticated Encryption) yang populer adalah ...",
+    "options": {
+      "A": "AES-GCM",
+      "B": "AES-ECB",
+      "C": "RSA-OAEP",
+      "D": "DES-CBC"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 77,
+    "question": "Berapa banyak keadaan privasi yang didefinisikan oleh Alan Westin?",
+    "options": {
+      "A": "Lima",
+      "B": "Dua",
+      "C": "Tiga",
+      "D": "Empat"
+    },
+    "correct": [
+      "D"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 78,
+    "question": "Yang termasuk bentuk pelanggaran pada fase Information Dissemination adalah?",
+    "options": {
+      "A": "Breach of Confidentiality & Disclosure",
+      "B": "Identification",
+      "C": "Aggregation",
+      "D": "Collection"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 79,
+    "question": "Manakah yang termasuk kategori \"Information Collection\" menurut Solove?",
+    "options": {
+      "A": "Surveillance dan interrogation",
+      "B": "Intrusion dan decisional interference",
+      "C": "Aggregation dan identification",
+      "D": "Disclosure dan exposure"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 80,
+    "question": "Menurut Saltzer dan Schroeder, apa arti “psychologically acceptable” dalam desain keamanan?",
+    "options": {
+      "A": "Mekanisme keamanan harus kompleks agar kuat",
+      "B": "Mekanisme keamanan harus mudah dipahami dan digunakan oleh penggunanya",
+      "C": "Keamanan hanya boleh diterapkan oleh pakar",
+      "D": "Keamanan harus sepenuhnya otomatis"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 81,
+    "question": "Karakteristik utama Positive Security Model adalah …",
+    "options": {
+      "A": "Mengizinkan semua lalu memblokir ancaman",
+      "B": "Hanya mengizinkan aktivitas yang sudah diketahui aman (Whitelist)",
+      "C": "Berbasis daftar serangan yang pernah terjadi",
+      "D": "Menggunakan pendekatan blacklist"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 82,
+    "question": "Mengapa Negative Security disebut blacklist model?",
+    "options": {
+      "A": "Mengizinkan semua di awal lalu memblokir yang berbahaya",
+      "B": "Whitelist berbasis IP",
+      "C": "Mengizinkan semua tanpa blok",
+      "D": "Blok semua lalu whitelist"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 83,
+    "question": "Yang termasuk kategori ancaman manusia (human threat) adalah …",
+    "options": {
+      "A": "Firewall misconfiguration",
+      "B": "Unmotivated humans & Clueless humans",
+      "C": "Automated bots",
+      "D": "Malware"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 84,
+    "question": "Menurut ISO 9241–11:2018, usability adalah …",
+    "options": {
+      "A": "Efektivitas, efisiensi, dan kepuasan pengguna dalam mencapai tujuan",
+      "B": "Ketahanan sistem terhadap serangan",
+      "C": "Kecepatan implementasi",
+      "D": "Kemampuan adaptasi sistem"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 85,
+    "question": "Cara mencegah serangan Cross-Site Scripting (XSS) yang efektif adalah...",
+    "options": {
+      "A": "Mematikan JavaScript di browser",
+      "B": "Menggunakan firewall jaringan",
+      "C": "Melakukan validasi input dan encoding output",
+      "D": "Menghapus database secara berkala"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 86,
+    "question": "Modularisasi program membantu...",
+    "options": {
+      "A": "Mempercantik tampilan kode",
+      "B": "Meningkatkan keamanan dan isolasi komponen (containment)",
+      "C": "Mempercepat koneksi internet",
+      "D": "Mengurangi penggunaan listrik"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 87,
+    "question": "Operasi atomik berarti...",
+    "options": {
+      "A": "Operasi yang berjalan sangat cepat",
+      "B": "Operasi yang memecah file",
+      "C": "Operasi dilakukan tanpa bisa disela (uninterruptible)",
+      "D": "Operasi yang bisa dibatalkan"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 88,
+    "question": "Program yang dijalankan dengan hak khusus disebut...",
+    "options": {
+      "A": "Guest program",
+      "B": "Privileged program",
+      "C": "User mode program",
+      "D": "Read-only program"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 89,
+    "question": "Langkah untuk meningkatkan keamanan interaksi program dengan sistem operasi adalah...",
+    "options": {
+      "A": "Menjalankan program dengan hak minimum (least privilege)",
+      "B": "Memberikan akses root ke semua user",
+      "C": "Mematikan log sistem",
+      "D": "Membuka semua port jaringan"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 90,
+    "question": "Bug Heartbleed adalah contoh dari kerentanan...",
+    "options": {
+      "A": "SQL Injection",
+      "B": "Buffer over-read",
+      "C": "Cross-Site Scripting",
+      "D": "Broken Authentication"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 91,
+    "question": "Fungsi C yang aman untuk membuat file sementara adalah...",
+    "options": {
+      "A": "mkstemp()",
+      "B": "fopen()",
+      "C": "tempnam()",
+      "D": "rand()"
+    },
+    "correct": [
+      "A"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 92,
+    "question": "Pemrograman defensif berarti...",
+    "options": {
+      "A": "Menyerang balik peretas",
+      "B": "Memeriksa dan menangani semua kemungkinan kesalahan (fail-safe)",
+      "C": "Mengabaikan pesan error",
+      "D": "Mengutamakan kecepatan eksekusi"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 93,
+    "question": "Encoding karakter penting karena...",
+    "options": {
+      "A": "Agar font terlihat bagus",
+      "B": "Mempengaruhi interpretasi simbol dan mencegah bypass filter",
+      "C": "Menghemat ukuran file",
+      "D": "Mempercepat download"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 94,
+    "question": "Race condition terjadi ketika...",
+    "options": {
+      "A": "Internet lambat",
+      "B": "Harddisk penuh",
+      "C": "Dua proses berjalan bersamaan tanpa sinkronisasi",
+      "D": "CPU terlalu panas"
+    },
+    "correct": [
+      "C"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 95,
+    "question": "Buffer overflow terjadi ketika...",
+    "options": {
+      "A": "Data terlalu sedikit",
+      "B": "Data yang dimasukkan melebihi kapasitas buffer",
+      "C": "Memori komputer kosong",
+      "D": "Koneksi jaringan terputus"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 96,
+    "question": "Fitur sistem operasi yang menyediakan variabel konfigurasi disebut...",
+    "options": {
+      "A": "Static file",
+      "B": "Environment variable",
+      "C": "Read-only memory",
+      "D": "User comment"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 97,
+    "question": "Canonicalization digunakan untuk...",
+    "options": {
+      "A": "Mengenkripsi data",
+      "B": "Menstandarkan variasi encoding karakter",
+      "C": "Mengompres file",
+      "D": "Menghapus data"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 98,
+    "question": "Salah satu kelemahan dalam OWASP Top Ten adalah...",
+    "options": {
+      "A": "Strong Password",
+      "B": "Cross-Site Scripting (XSS)",
+      "C": "Multi-Factor Authentication",
+      "D": "Data Encryption"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 99,
+    "question": "Konsep chroot jail digunakan untuk...",
+    "options": {
+      "A": "Memenjarakan peretas",
+      "B": "Membatasi akses program ke bagian tertentu dari sistem file",
+      "C": "Mengunci keyboard",
+      "D": "Menghapus sistem operasi"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 100,
+    "question": "Apa fungsi dari load balancer dalam keamanan web?",
+    "options": {
+      "A": "Menyimpan password",
+      "B": "Mendistribusikan lalu lintas untuk menjaga ketersediaan (Availability)",
+      "C": "Menghapus virus",
+      "D": "Mengenkripsi database"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 101,
+    "question": "Apa yang dimaksud dengan \"webification\"?",
+    "options": {
+      "A": "Membuat aplikasi desktop offline",
+      "B": "Mengubah aplikasi native menjadi aplikasi web (PWA) / akses via browser",
+      "C": "Menghapus fitur web",
+      "D": "Menggunakan jaringan telepon"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 102,
+    "question": "Apa tujuan dari OAuth?",
+    "options": {
+      "A": "Mengganti HTTPS",
+      "B": "Mengautentikasi pengguna tanpa menyerahkan password langsung",
+      "C": "Membuat password lebih panjang",
+      "D": "Memformat server"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 103,
+    "question": "Same Origin Policy (SOP) digunakan untuk...",
+    "options": {
+      "A": "Mengizinkan semua situs saling akses",
+      "B": "Mencegah skrip dari satu situs mengakses data situs lain",
+      "C": "Memblokir semua gambar",
+      "D": "Mempercepat loading website"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 104,
+    "question": "Apa fungsi utama sertifikat digital pada HTTPS?",
+    "options": {
+      "A": "Agar website terlihat keren",
+      "B": "Mengautentikasi identitas server dan mengenkripsi komunikasi",
+      "C": "Menyimpan history browsing",
+      "D": "Mempercepat koneksi internet"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  },
+  {
+    "id": 105,
+    "question": "Manakah langkah aman dalam menangani file yang diunggah pengguna?",
+    "options": {
+      "A": "Langsung dieksekusi di server",
+      "B": "Menghindari eksekusi langsung & memeriksa tipe MIME",
+      "C": "Menyimpan di folder root sistem",
+      "D": "Memberikan akses penuh ke file tersebut"
+    },
+    "correct": [
+      "B"
+    ],
+    "type": "single",
+    "weight": 1
+  }
+]
