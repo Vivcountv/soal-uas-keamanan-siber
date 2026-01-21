@@ -2,371 +2,312 @@ import streamlit as st
 import json
 import random
 import time
-from datetime import timedelta
+from datetime import datetime, timedelta
+import streamlit.components.v1 as components
 
-# Load questions
-with open("questions.json", "r", encoding="utf-8") as f:
-    questions = json.load(f)
-
-# Page config
+# --- 1. KONFIGURASI HALAMAN ---
 st.set_page_config(
     page_title="CBT Keamanan Siber",
     page_icon="🛡️",
-    layout="centered"
+    layout="centered",
+    initial_sidebar_state="collapsed"
 )
 
-# Custom CSS untuk styling
+# --- 2. DUMMY DATA (Fallback jika file json tidak ada) ---
+# Ini agar kode bisa langsung jalan saat dicoba tanpa file eksternal
+DEFAULT_QUESTIONS = [
+    {
+        "id": 1,
+        "type": "single",
+        "question": "Protokol manakah yang digunakan untuk mengamankan komunikasi web?",
+        "options": {"A": "HTTP", "B": "HTTPS", "C": "FTP", "D": "SMTP"},
+        "correct": ["B"]
+    },
+    {
+        "id": 2,
+        "type": "multiple",
+        "question": "Manakah dari berikut ini yang termasuk jenis malware? (Pilih dua)",
+        "options": {"A": "Firewall", "B": "Trojan", "C": "Ransomware", "D": "Ethernet"},
+        "correct": ["B", "C"]
+    },
+    {
+        "id": 3,
+        "type": "single",
+        "question": "Apa kepanjangan dari CIA Triad dalam keamanan informasi?",
+        "options": {"A": "Confidentiality, Integrity, Availability", "B": "Control, Intelligence, Authorization", "C": "Cyber, Internet, Access", "D": "Central, Information, Agency"},
+        "correct": ["A"]
+    }
+]
+
+# --- 3. LOAD DATA ---
+@st.cache_data
+def load_questions():
+    try:
+        with open("questions.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return DEFAULT_QUESTIONS
+
+questions = load_questions()
+
+# --- 4. CSS CLEAN & SIMPLE ---
 st.markdown("""
 <style>
-    /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    /* Font & Base */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
     
-    /* Global Styles */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa; /* Light Grey Background */
+        font-family: 'Inter', sans-serif;
     }
     
-    /* Main Container */
-    .main .block-container {
-        background: white;
-        border-radius: 20px;
-        padding: 2rem 3rem;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        animation: slideIn 0.5s ease-out;
+    /* Container Utama */
+    .block-container {
+        max-width: 800px;
+        padding-top: 2rem;
     }
-    
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Title */
-    h1 {
-        color: #667eea !important;
-        text-align: center;
-        font-weight: 700 !important;
-        font-size: 2.5rem !important;
-        margin-bottom: 1rem !important;
-        animation: fadeIn 0.8s ease-in;
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
-    /* Timer Box */
-    .timer-box {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin: 1rem auto;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        animation: pulse 2s infinite;
-        max-width: 250px;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-    
-    /* Progress Bar */
-    .stProgress > div > div > div > div {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    }
-    
-    /* Question Card */
+
+    /* Card Styling */
     .question-card {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin: 1.5rem 0;
-        border-left: 5px solid #667eea;
-        animation: slideInLeft 0.4s ease-out;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+        border: 1px solid #e9ecef;
     }
-    
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    
-    .question-number {
-        color: #667eea;
-        font-weight: 600;
-        font-size: 1.1rem;
+
+    /* Typography */
+    h1 {
+        color: #1a202c;
+        font-weight: 700;
+        text-align: center;
         margin-bottom: 0.5rem;
     }
     
     .question-text {
-        font-size: 1.2rem;
-        color: #333;
-        font-weight: 500;
-        margin-bottom: 1rem;
-        line-height: 1.6;
-    }
-    
-    /* Radio and Checkbox */
-    .stRadio > label, .stMultiselect > label {
+        font-size: 1.15rem;
         font-weight: 600;
-        color: #667eea;
-        font-size: 1.1rem;
+        color: #2d3748;
+        margin-bottom: 1rem;
     }
-    
-    /* Radio options */
-    .stRadio > div {
-        background: white;
-        padding: 0.5rem;
-        border-radius: 10px;
+
+    .question-badge {
+        background-color: #e2e8f0;
+        color: #4a5568;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 10px;
     }
-    
-    .stRadio > div > label {
-        background: white;
-        border: 2px solid #e0e0e0;
-        border-radius: 10px;
-        padding: 1rem;
-        margin: 0.5rem 0;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: block;
-    }
-    
-    .stRadio > div > label:hover {
-        border-color: #667eea;
-        transform: translateX(5px);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-    }
-    
-    /* Button */
+
+    /* Tombol Submit */
     .stButton > button {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        background-color: #3182ce; /* Corporate Blue */
         color: white;
         border: none;
-        padding: 0.75rem 2.5rem;
-        font-size: 1.2rem;
+        border-radius: 8px;
+        padding: 12px 24px;
         font-weight: 600;
-        border-radius: 50px;
-        box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
-        transition: all 0.3s ease;
         width: 100%;
-        margin-top: 2rem;
+        transition: background 0.2s;
     }
-    
     .stButton > button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+        background-color: #2c5282;
     }
-    
-    /* Success/Error Messages */
-    .stSuccess, .stError, .stInfo {
-        border-radius: 10px;
-        padding: 1rem;
-        animation: bounceIn 0.5s ease;
-    }
-    
-    @keyframes bounceIn {
-        0% { transform: scale(0.3); opacity: 0; }
-        50% { transform: scale(1.05); }
-        70% { transform: scale(0.9); }
-        100% { transform: scale(1); opacity: 1; }
-    }
-    
-    /* Score Display */
-    .score-display {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 4rem;
-        font-weight: bold;
+
+    /* Score Box */
+    .score-box {
         text-align: center;
-        margin: 2rem 0;
-        animation: bounceIn 0.8s ease;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 1rem;
     }
     
-    /* Hide Streamlit branding */
+    /* Hide Streamlit Elements */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    
-    /* Multiselect styling */
-    .stMultiselect [data-baseweb="tag"] {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 20px;
-    }
+    header {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-# Initialize session state
+# --- 5. SESSION STATE MANAGEMENT ---
 if "start_time" not in st.session_state:
     st.session_state.start_time = time.time()
-    st.session_state.questions = random.sample(questions, len(questions))
-    # Shuffle options for each question
-    for q in st.session_state.questions:
+    # Randomize questions once
+    st.session_state.quiz_data = random.sample(questions, len(questions))
+    # Shuffle options
+    for q in st.session_state.quiz_data:
         items = list(q["options"].items())
         random.shuffle(items)
         q["shuffled_options"] = items
 
-if "answers" not in st.session_state:
-    st.session_state.answers = {}
-
 if "submitted" not in st.session_state:
     st.session_state.submitted = False
 
-# Timer
-DURATION = 60 * 30  # 30 menit
-remaining = DURATION - int(time.time() - st.session_state.start_time)
+# --- 6. LOGIKA TIMER (Server Side Check) ---
+DURATION_SEC = 30 * 60  # 30 Menit
+elapsed = time.time() - st.session_state.start_time
+remaining_sec = max(0, DURATION_SEC - elapsed)
 
-# Header
+if remaining_sec <= 0 and not st.session_state.submitted:
+    st.session_state.submitted = True
+    st.warning("Waktu telah habis!")
+
+# --- 7. HEADER & VISUAL TIMER (Client Side JS) ---
 st.markdown("<h1>🛡️ CBT Keamanan Siber</h1>", unsafe_allow_html=True)
 
-# Check if time is up
-if remaining <= 0 and not st.session_state.submitted:
-    st.error("⏰ Waktu Habis! Quiz otomatis disubmit.")
-    st.session_state.submitted = True
-    remaining = 0
-
-# Timer display
-minutes = remaining // 60
-seconds = remaining % 60
-timer_color = "#f5576c" if remaining < 300 else "#667eea"
-st.markdown(f"""
-<div class="timer-box" style="background: linear-gradient(135deg, {timer_color} 0%, #f093fb 100%);">
-    ⏱️ {minutes:02d}:{seconds:02d}
-</div>
-""", unsafe_allow_html=True)
-
-# Progress bar
+# Timer JavaScript (Agar tidak perlu st.rerun() terus menerus)
 if not st.session_state.submitted:
-    progress = len([a for a in st.session_state.answers.values() if a]) / len(st.session_state.questions)
-    st.progress(progress)
-    st.markdown(f"<p style='text-align: center; color: #667eea; font-weight: 600;'>Progress: {int(progress * 100)}% ({len([a for a in st.session_state.answers.values() if a])}/{len(st.session_state.questions)} soal terjawab)</p>", unsafe_allow_html=True)
-
-# Display questions or results
-if not st.session_state.submitted:
-    st.markdown("---")
-    
-    for idx, q in enumerate(st.session_state.questions):
-        st.markdown(f"""
-        <div class="question-card">
-            <div class="question-number">📝 Soal {idx + 1}</div>
-            <div class="question-text">{q['question']}</div>
+    timer_html = f"""
+        <div style="
+            text-align: center; 
+            font-family: sans-serif; 
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            color: #e53e3e; 
+            background: #fff5f5; 
+            padding: 10px; 
+            border-radius: 10px; 
+            margin-bottom: 20px;
+            border: 1px solid #fed7d7;">
+            ⏱️ Sisa Waktu: <span id="timer">--:--</span>
         </div>
-        """, unsafe_allow_html=True)
+        <script>
+        var timeLeft = {int(remaining_sec)};
+        var timerElem = document.getElementById('timer');
         
-        if q["type"] == "single":
-            options = [f"{k}. {v}" for k, v in q["shuffled_options"]]
-            answer = st.radio(
-                "Pilih satu jawaban:",
-                options,
-                key=f"q_{q['id']}",
-                index=None
-            )
-            if answer:
-                st.session_state.answers[q["id"]] = answer[0]
+        var countdown = setInterval(function() {{
+            if(timeLeft <= 0) {{
+                clearInterval(countdown);
+                timerElem.innerHTML = "WAKTU HABIS";
+            }} else {{
+                var m = Math.floor(timeLeft / 60);
+                var s = timeLeft % 60;
+                timerElem.innerHTML = m + "m " + (s < 10 ? "0" : "") + s + "s";
+                timeLeft--;
+            }}
+        }}, 1000);
+        </script>
+    """
+    components.html(timer_html, height=80)
+
+# --- 8. FORM QUIZ ---
+if not st.session_state.submitted:
+    # Kita bungkus semua pertanyaan dalam st.form
+    # Ini membuat halaman TIDAK reload setiap kali user memilih jawaban
+    with st.form(key='quiz_form'):
+        for i, q in enumerate(st.session_state.quiz_data):
+            st.markdown(f"""
+            <div class="question-card">
+                <span class="question-badge">Soal {i + 1}</span>
+                <div class="question-text">{q['question']}</div>
+            </div>
+            """, unsafe_allow_html=True)
             
-        else:  # multiple choice
-            options = [f"{k}. {v}" for k, v in q["shuffled_options"]]
-            answers = st.multiselect(
-                "Pilih satu atau lebih jawaban:",
-                options,
-                key=f"q_{q['id']}"
-            )
-            st.session_state.answers[q["id"]] = [ans[0] for ans in answers]
+            # Opsi Jawaban
+            labels = [f"{k}. {v}" for k, v in q["shuffled_options"]]
+            
+            if q["type"] == "single":
+                st.radio(
+                    "Pilih Jawaban:", 
+                    labels, 
+                    key=f"ans_{q['id']}", 
+                    index=None, 
+                    label_visibility="collapsed"
+                )
+            else:
+                st.markdown("<p style='font-size:0.9rem; color:#666; margin-bottom:5px;'>Pilih semua yang benar:</p>", unsafe_allow_html=True)
+                for label in labels:
+                    st.checkbox(label, key=f"ans_{q['id']}_{label}")
+
+        st.markdown("---")
+        submit_btn = st.form_submit_button("🔒 KUNCI & KIRIM JAWABAN")
         
-        st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Submit button
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        if st.button("✅ SUBMIT JAWABAN", type="primary"):
+        if submit_btn:
             st.session_state.submitted = True
             st.rerun()
 
+# --- 9. HASIL & PENILAIAN ---
 else:
-    # Calculate score
+    # Hitung Skor
     score = 0
-    total = len(st.session_state.questions)
-    
-    for q in st.session_state.questions:
-        user_answer = st.session_state.answers.get(q["id"], [])
-        correct = q["correct"]
-        
+    total_q = len(st.session_state.quiz_data)
+    results = []
+
+    for q in st.session_state.quiz_data:
+        correct_keys = q["correct"]
+        user_correct = False
+        user_response = []
+
         if q["type"] == "single":
-            if user_answer in correct:
+            # Ambil jawaban user dari session state
+            ans_key = f"ans_{q['id']}"
+            if ans_key in st.session_state and st.session_state[ans_key]:
+                selected_opt = st.session_state[ans_key].split(".")[0] # Ambil "A", "B", dll
+                user_response = [selected_opt]
+                if selected_opt in correct_keys:
+                    score += 1
+                    user_correct = True
+        
+        else: # Multiple choice
+            # Cek manual checkbox
+            selected_opts = []
+            for k, v in q["shuffled_options"]:
+                cb_key = f"ans_{q['id']}_{k}. {v}"
+                if st.session_state.get(cb_key, False):
+                    selected_opts.append(k)
+            
+            user_response = selected_opts
+            # Logika penilaian: Harus persis sama (bisa diubah ke partial score jika mau)
+            if set(selected_opts) == set(correct_keys):
                 score += 1
-        else:
-            if isinstance(user_answer, list):
-                correct_count = len(set(user_answer) & set(correct))
-                score += correct_count / len(correct)
-    
-    # Display result
-    st.balloons()
+                user_correct = True
+            # Partial score logic (opsional): score += len(set(selected_opts) & set(correct_keys)) / len(correct_keys)
+
+        results.append({
+            "question": q["question"],
+            "user_correct": user_correct,
+            "correct_ans": correct_keys,
+            "user_ans": user_response
+        })
+
+    final_score = (score / total_q) * 100
+
+    # Tampilan Hasil
     st.markdown(f"""
-    <div style="text-align: center; margin: 3rem 0;">
-        <h2 style="color: #667eea;">🎉 Quiz Selesai!</h2>
-        <div class="score-display">{score:.1f} / {total}</div>
-        <p style="font-size: 1.5rem; color: #666;">
-            Persentase: {(score/total*100):.1f}%
-        </p>
+    <div class="score-box">
+        <h2 style="color: #2d3748;">Hasil Ujian</h2>
+        <div style="font-size: 3rem; font-weight: 700; color: {'#38a169' if final_score >= 70 else '#e53e3e'};">
+            {final_score:.0f}
+        </div>
+        <p style="color: #718096;">Skor Akhir Anda</p>
     </div>
     """, unsafe_allow_html=True)
-    
-    # Grade
-    percentage = (score / total) * 100
-    if percentage >= 80:
-        st.success("🌟 Luar Biasa! Anda sangat memahami keamanan siber!")
-    elif percentage >= 60:
-        st.info("👍 Bagus! Terus tingkatkan pemahaman Anda!")
+
+    if final_score >= 70:
+        st.success("Selamat! Anda lulus kompetensi ini.")
     else:
-        st.warning("📚 Perlu belajar lebih banyak. Jangan menyerah!")
-    
-    # Show answers
-    with st.expander("📊 Lihat Pembahasan Jawaban"):
-        for idx, q in enumerate(st.session_state.questions):
-            user_answer = st.session_state.answers.get(q["id"], [])
-            correct = q["correct"]
+        st.error("Maaf, skor Anda belum memenuhi standar kelulusan.")
+
+    with st.expander("📄 Lihat Pembahasan Detail"):
+        for i, res in enumerate(results):
+            color = "#c6f6d5" if res['user_correct'] else "#fed7d7"
+            icon = "✅" if res['user_correct'] else "❌"
             
-            st.markdown(f"**Soal {idx + 1}:** {q['question']}")
+            st.markdown(f"""
+            <div style="background: {color}; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+                <strong>{i+1}. {res['question']}</strong><br>
+                <span style="font-size:0.9rem">Jawaban Anda: {res['user_ans']} {icon}</span><br>
+                <span style="font-size:0.9rem; color:#2f855a">Kunci Jawaban: {res['correct_ans']}</span>
+            </div>
+            """, unsafe_allow_html=True)
             
-            if q["type"] == "single":
-                is_correct = user_answer in correct
-                st.markdown(f"- Jawaban Anda: **{user_answer}** {'✅' if is_correct else '❌'}")
-                st.markdown(f"- Jawaban Benar: **{', '.join(correct)}**")
-            else:
-                if isinstance(user_answer, list):
-                    correct_count = len(set(user_answer) & set(correct))
-                    st.markdown(f"- Jawaban Anda: **{', '.join(user_answer) if user_answer else 'Tidak dijawab'}**")
-                    st.markdown(f"- Jawaban Benar: **{', '.join(correct)}**")
-                    st.markdown(f"- Skor: {correct_count}/{len(correct)} ✅")
-                else:
-                    st.markdown(f"- Jawaban Anda: **Tidak dijawab** ❌")
-                    st.markdown(f"- Jawaban Benar: **{', '.join(correct)}**")
-            
-            st.markdown("---")
-    
-    # Retry button
-    if st.button("🔄 Coba Lagi"):
+    if st.button("🔄 Kerjakan Ulang"):
         for key in list(st.session_state.keys()):
             del st.session_state[key]
         st.rerun()
-
-# Auto refresh for timer (only if not submitted)
-if not st.session_state.submitted and remaining > 0:
-    time.sleep(1)
-    st.rerun()
